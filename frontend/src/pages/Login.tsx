@@ -1,8 +1,12 @@
+import { Stack } from "@mui/material";
+
+import LoginSection from "@widgets/LoginSection";
+
 const Login = () => {
   return (
-    <>
-      <div>Hello World</div>
-    </>
+    <Stack sx={{ height: "100vh", padding: 0, justifyContent: "center" }}>
+      <LoginSection />
+    </Stack>
   );
 };
 
