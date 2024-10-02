@@ -1,6 +1,5 @@
 {
   "root": [
-    "./src/app.tsx",
     "./index.tsx",
     "./src/vite-env.d.ts"
   ],

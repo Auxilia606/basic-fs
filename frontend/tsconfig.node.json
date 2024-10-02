@@ -12,6 +12,17 @@
     "moduleDetection": "force",
     "noEmit": true,
 
+    /* paths */
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@widgets/*": ["src/widgets/*"],
+      "@features/*": ["src/features/*"],
+      "@entities/*": ["src/entities/*"],
+      "@shared/*": ["src/shared/*"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
