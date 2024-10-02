@@ -1,4 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -9,12 +10,24 @@ import {
   Typography,
 } from "@mui/material";
 
-import { LoginReqDTO } from "@shared/api/auth/login";
+import useApiAuthLogin, { LoginReqDTO } from "@shared/api/auth/login";
 
 const LoginSection = () => {
   const { register, handleSubmit } = useForm<LoginReqDTO>();
 
-  const onSubmit: SubmitHandler<LoginReqDTO> = (data) => console.log(data);
+  const navigate = useNavigate();
+
+  const apiAuthLogin = useApiAuthLogin();
+
+  const onSubmit: SubmitHandler<LoginReqDTO> = async (data) => {
+    try {
+      await apiAuthLogin.mutateAsync(data);
+
+      navigate("/");
+    } catch (error) {
+      console.error(`[ERROR] ${error}`);
+    }
+  };
 
   return (
     <Card variant="outlined" sx={{ padding: "2rem 1.5rem", margin: "2rem" }}>
