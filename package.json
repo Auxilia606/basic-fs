@@ -1,0 +1,9 @@
+{
+  "name": "basic-fs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Auxilia606/basic-fs.git",
+  "author": "youngtaek_hong <youngtaek_hong@dweax.com>",
+  "license": "MIT",
+  "dependencies": {}
+}
